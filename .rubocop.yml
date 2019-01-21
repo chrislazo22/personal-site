@@ -1,0 +1,36 @@
+require: rubocop-rspec
+
+Rails:
+  Enabled: true
+
+AllCops:
+  DisplayCopNames: true
+  TargetRubyVersion: 2.6
+  Excludes:
+    - db/**/*
+    - bin/**/*
+    - config/**/*
+    - spec/spec_helper.rb
+    - spec/rails_helper.rb
+    - Rakefile
+    - config.ru
+    - Gemfile
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+
+Metrics/LineLength:
+  Max: 100
+
+Metrics/MethodLength:
+  Max: 25
+
+Metrics/AbcSize:
+  Max: 25
+
+ClassLength:
+  Max: 250
+
+Documentation:
+  Enabled: false
