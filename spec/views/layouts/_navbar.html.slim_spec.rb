@@ -4,9 +4,6 @@ require 'rails_helper'
 require 'application_helper'
 
 RSpec.describe 'layouts/_navbar.html.haml', type: :view do
-  def assert_navbar_link
-  end
-
   before do
     render
   end
@@ -35,6 +32,5 @@ RSpec.describe 'layouts/_navbar.html.haml', type: :view do
     it 'render a Contact Me link' do
       assert_select 'nav ul li', text: 'Contact Me', count: 1
     end
-
   end
 end

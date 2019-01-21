@@ -1,6 +1,1 @@
-#frozen_string_literal: true
-
-require 'rails_helper'
-
-RSpec.describe "homepage/index.html.erb", type: :view do
-end
+# frozen_string_literal: true
