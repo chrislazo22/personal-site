@@ -26,6 +26,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Bootstrap is my CSS framework
 gem 'bootstrap', '~> 4.2.1'
+gem 'jquery-rails'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -52,8 +53,6 @@ group :development, :test do
   # Pry for a better life
   gem 'pry'
   gem 'pry-rails'
-
-  gem 'shoulda-matchers'
 end
 
 group :development do

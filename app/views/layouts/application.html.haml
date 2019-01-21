@@ -10,6 +10,8 @@
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
-  %body
-    %div.container-fluid
-    = yield
+  %body{class: "#{controller.controller_name}",
+        id: "#{controller.action_name}"}
+    = render partial: 'layouts/navbar'
+    .container-fluid
+      = yield
