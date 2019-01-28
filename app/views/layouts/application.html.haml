@@ -4,7 +4,7 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}
 
-    %title ChrisLazoPersonalSite
+    %title ChrisLazo
 
     = csrf_meta_tags
     = csp_meta_tag
@@ -13,5 +13,4 @@
   %body{class: "#{controller.controller_name}",
         id: "#{controller.action_name}"}
     = render partial: 'layouts/navbar'
-    .container-fluid
-      = yield
+    = yield
