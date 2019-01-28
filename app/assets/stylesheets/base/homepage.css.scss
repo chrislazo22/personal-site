@@ -1,0 +1,41 @@
+.flex-wrapper {
+  align-items: center;
+  height: 75vh;
+}
+
+.wrapper-container {
+  max-width: 800px;
+  min-width: 320px;
+  width: 100%;
+  position: relative;
+  height: 400px;
+}
+
+.card-content {
+  z-index: 10;
+  width:80%;
+  position: absolute;
+  top: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: Lato, sans-serif;
+    font-weight: 500;
+    text-shadow: 0px 1px 0px rgba(0,0,0,.15);
+  }
+  p {
+    color: white;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: Lato, sans-serif;
+    font-weight: 500;
+    text-shadow: 0px 1px 0px rgba(0,0,0,.15);
+  }
+}
