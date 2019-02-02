@@ -1,24 +1,17 @@
 .flex-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   align-items: center;
-  height: 75vh;
 }
 
-.wrapper-container {
-  max-width: 800px;
-  min-width: 320px;
-  width: 100%;
-  position: relative;
-  height: 400px;
-}
-
-.card-content {
+.content {
   z-index: 10;
-  width:80%;
-  position: absolute;
-  top: 40%;
+  margin-top: 80%;
+  width:100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   h1 {
     color: white;
