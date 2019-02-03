@@ -41,3 +41,33 @@ header {
 .header .col-sm {
   padding: 0;
 }
+
+// ###### Contact Me #######
+.form {
+  align-content: center;
+}
+.contact-form {
+  padding: 30px 0 30px 0;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 60px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  padding-top: 20px;
+}
+
+#custom-form {
+  width: 600px;
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  box-shadow: none;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+
