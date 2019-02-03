@@ -12,6 +12,4 @@
     = javascript_include_tag 'application'
   %body{class: "#{controller.controller_name}",
         id: "#{controller.action_name}"}
-    .wrapper
-      = render partial: 'layouts/navbar'
-      = yield
+    = yield
