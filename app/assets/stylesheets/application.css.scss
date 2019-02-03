@@ -15,6 +15,7 @@
  */
 
 $enable-flex: true;
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:900');
 @import "bootstrap";
 
 html, body {
@@ -22,24 +23,18 @@ html, body {
   width: 100%;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
-  background-color: #000000;
+  background-color: #FFF;
   padding: 0;
   overflow: scroll;
 }
 
-.flex-wrapper {
-  background: url(hero_1.jpg);
+.wrapper {
+  background: url(hero_3.jpg);
   background-size: 100%;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
+  height: 100%;
+  z-index: -1;
 }
