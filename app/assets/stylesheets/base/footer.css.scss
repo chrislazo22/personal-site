@@ -27,3 +27,17 @@ footer {
   font-size: 10px;
   color: #CCCCCC;
 }
+
+.fa {
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0px 10px;
+  color: #FFFFFF;
+}
+
+.fa:hover {
+  color: #CCCCCC;
+  transition: color 0.3s;
+}
