@@ -1,2 +1,2 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+$('#contact-me').html("<%= j render 'contact_form' %>");
+$('#flash-message').html("<%= j render 'flash' %>").delay(3000).fadeOut(4000);

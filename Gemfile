@@ -18,11 +18,6 @@ gem 'uglifier', '>= 1.3.0'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
 
 # Bootstrap is my CSS framework
 gem 'bootstrap', '~> 4.2.1'
@@ -34,6 +29,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # HTML templating
 gem 'haml'
 gem "haml-rails", "~> 1.0"
+
+# For ENV variables
+gem "figaro"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
