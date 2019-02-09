@@ -1,0 +1,19 @@
+.wrapper
+  = render partial: 'layouts/navbar'
+  %header
+    .flex-wrapper
+      .inner
+        .content
+          .row
+            .col-sm
+              %h1.first-name Chris
+            .col-sm
+              %h1.last-name Lazo
+          .row.ml-auto.header
+            .col-sm
+              %h2.heading Software Developer
+
+%section.contact-me.mb-4
+  = render partial: 'contact_form'
+
+= render partial: 'footer'

@@ -1,21 +1,19 @@
-.container
-  %nav.navbar.navbar-expand-lg.navbar-dark
-    = link_to('CL', root_path, {class: 'navbar-brand'})
-    %button.navbar-toggler{"aria-controls" => "navbarNav",
-      "aria-expanded" => "false",
-      "aria-label" => "Toggle navigation",
-      "data-target" => "#navbarNav",
-      "data-toggle" => "collapse",
-      type: "button"}
-      %span.navbar-toggler-icon
+%nav.navbar.my-nav.navbar-expand-lg.navbar-light
+  %a.navbar-brand{:href => "#"}
+    -# %img{:alt => "", :src => "/images/logo.png", }/
+    = image_tag('logo2.png', size: '55')
 
-    .collapse.navbar-collapse#navbarNav
-      %ul.nav.navbar-nav.ml-auto
-        %li.nav-item{class: "#{'active' if params[:action] == 'index'}"}
-          = link_to('Home', root_path, {class: 'nav-link'})
-        %li.nav-item
-          = link_to('Portfolio', root_path, {class: 'nav-link'})
-        %li.nav-item
-          = link_to('About Me', root_path, {class: 'nav-link'})
-        %li.nav-item
-          = link_to('Contact Me', root_path, {class: 'nav-link'})
+  %button.navbar-toggler{"aria-controls" => "navbarNav",
+    "aria-expanded" => "false",
+    "aria-label" => "Toggle navigation",
+    "data-target" => "#navbarNav",
+    "data-toggle" => "collapse",
+    type: "button"}
+    %span.navbar-toggler-icon
+
+  .collapse.navbar-collapse#navbarNav
+    %ul.nav.navbar-nav.ml-auto
+      %li.nav-item{class: "#{'active' if params[:action] == 'index'}"}
+        = link_to('Home', root_path, {class: 'nav-link'})
+      %li.nav-item
+        %a.nav-link{href: "#contact-form"} Contact Me

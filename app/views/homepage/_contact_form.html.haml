@@ -1,0 +1,17 @@
+.container
+  .form
+    .contact-title#contact-form
+      %h2.contact-title.text-center Get in Touch
+    .contact-form
+      = form_for @contact_form, url: homepage_index_path, remote: true do |f|
+        = f.text_field  :name, required: true,
+          class: "mb-4", placeholder: 'Name', type: 'text', id: 'custom-form'
+        = f.text_field :email, required: true,
+          class: "mb-4", placeholder: 'E-mail', type: 'email', id:'custom-form'
+        = f.text_area :body, rows: 3, cols: 40, required: true,
+          class: "mb-4", placeholder: "Send a message", id: 'custom-form'
+
+        .col-sm
+          = f.submit 'Send Message', class: 'btn btn-dark'
+  .col-md-6#flash-message
+    = render partial: 'flash'

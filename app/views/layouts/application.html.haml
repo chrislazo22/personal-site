@@ -3,8 +3,10 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}
+    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}/
 
-    %title ChrisLazoPersonalSite
+
+    %title ChrisLazo
 
     = csrf_meta_tags
     = csp_meta_tag
@@ -12,6 +14,4 @@
     = javascript_include_tag 'application'
   %body{class: "#{controller.controller_name}",
         id: "#{controller.action_name}"}
-    = render partial: 'layouts/navbar'
-    .container-fluid
-      = yield
+    = yield
