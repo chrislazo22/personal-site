@@ -1,5 +1,8 @@
 %nav.navbar.my-nav.navbar-expand-lg.navbar-light
-  = link_to('CL', root_path, {class: 'navbar-brand'})
+  %a.navbar-brand{:href => "#"}
+    -# %img{:alt => "", :src => "/images/logo.png", }/
+    = image_tag('logo2.png', size: '55')
+
   %button.navbar-toggler{"aria-controls" => "navbarNav",
     "aria-expanded" => "false",
     "aria-label" => "Toggle navigation",
