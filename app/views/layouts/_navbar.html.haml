@@ -16,8 +16,4 @@
       %li.nav-item{class: "#{'active' if params[:action] == 'index'}"}
         = link_to('Home', root_path, {class: 'nav-link'})
       %li.nav-item
-        = link_to('Portfolio', root_path, {class: 'nav-link'})
-      %li.nav-item
-        = link_to('About Me', root_path, {class: 'nav-link'})
-      %li.nav-item
-        = link_to('Contact Me', root_path, {class: 'nav-link'})
+        %a.nav-link{href: "#contact-form"} Contact Me

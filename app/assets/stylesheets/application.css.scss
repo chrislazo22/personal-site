@@ -23,6 +23,10 @@ html, body {
   width: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #FFF;
   padding: 0;
