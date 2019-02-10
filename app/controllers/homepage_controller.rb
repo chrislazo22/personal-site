@@ -7,10 +7,11 @@ class HomepageController < ApplicationController
 
   def create
     @message = Message.new(message_params)
-    @message.request = request
-    if @message.deliver
-      flash[:notice] = "Thank you for your message. I'll get back to you soon!"
+
+    if @message.valid?
+      MessageMailer.contact(@message).deliver_now
       redirect_to root_path
+      flash[:notice] = "Thank you for your message. I'll get back to you soon!"
     else
       flash[:notice] = "Message did not send."
       render root_path

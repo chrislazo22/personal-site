@@ -1,7 +1,7 @@
-class Message < MailForm::Base
-	attribute :name, validate: true
-  attribute :email, validate: /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
-  attribute :body, validate: true
+class Message
+	include ActiveModel::Model
+  attr_accessor :name, :email, :phone_number, :body
+  validates :name, :email, :body, presence: true
 
   def headers
     {
