@@ -3,7 +3,7 @@
     .contact-title#contact-form
       %h2.contact-title.text-center Get in Touch
     .contact-form
-      = form_for @contact_form, url: homepage_index_path, remote: true do |f|
+      = form_for @message, url: homepage_index_path, remote: true do |f|
         = f.text_field  :name, required: true,
           class: "mb-4", placeholder: 'Name', type: 'text', id: 'custom-form'
         = f.text_field :email, required: true,

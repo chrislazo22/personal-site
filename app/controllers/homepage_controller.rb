@@ -2,20 +2,19 @@
 
 class HomepageController < ApplicationController
   def index
-    @contact_form = Message.new
+    @message = Message.new
   end
 
   def create
-    @message = Message.new(contact_params)
-
-    if @message.valid?
-      MessageMailer.contact(@message).deliver_now
-      @contact_form = ContactForm.new
-      redirect_to root_path
-
+    @message = Message.new(message_params)
+    @message.request = request
+    binding.pry
+    if @message.deliver
       flash[:notice] = "Thank you for your message. I'll get back to you soon!"
+      redirect_to root_path
     else
       flash[:notice] = "Message did not send."
+      render root_path
     end
   end
 
