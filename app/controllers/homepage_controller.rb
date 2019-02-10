@@ -8,7 +8,6 @@ class HomepageController < ApplicationController
   def create
     @message = Message.new(message_params)
     @message.request = request
-    binding.pry
     if @message.deliver
       flash[:notice] = "Thank you for your message. I'll get back to you soon!"
       redirect_to root_path
