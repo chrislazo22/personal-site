@@ -30,18 +30,11 @@ Rails.application.configure do
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :local
 
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { host: 'localhost:3000' }
-  config.action_mailer.delivery_method = :smtp
-	config.action_mailer.smtp_settings = {
-		address:              'smtp.sendgrid.net',
-		domain:               'localhost:3000',
-		user_name:            ENV['SENDGRID_USERNAME'],
-		password:             ENV['SENDGRID_PASSWORD'],
-		authentication:       :plain,
-		enable_starttls_auto: true
-	}
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+    api_key: ENV["MAILGUN_API_KEY"],
+    domain: ENV['MAILGUN_DOMAIN'],
+  }
 
   config.action_mailer.perform_caching = false
 
